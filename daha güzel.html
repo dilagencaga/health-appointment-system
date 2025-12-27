@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özbekistan Sağlık Sistemi</title>
+  <link rel="stylesheet" href="daha güzel.css">
+  <style>
+    /* Hakkımızda ve Randevu bölümleri varsayılan olarak gizli */
+    #about-section, #appointment-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="images/logoweb.png" alt="UzMed Logo" class="logo"> <!-- Amblem eklendi -->
+    <h1>Özbekistan Sağlık Sistemi</h1>
+  </div>
+
+  <div class="homepage">
+    <div class="image-container">
+      <img src="images/ss2.jpg" alt="Doktorlar" class="image">
+      <h2 class="link" onclick="navigateTo('about')">Hakkımızda</h2> <!-- Hakkımızda'ya tıklandığında fonksiyon çağrılır -->
+    </div>
+    <div class="image-container">
+      <img src="images/ss3.jpg" alt="Kalp" class="image">
+      <h2 class="link" onclick="navigateTo('appointment')">Randevu</h2> <!-- scrollToAppointment fonksiyonu eklendi -->
+    </div>
+    <div class="image-container">
+      <img src="images/ss4.png" alt="Özbekistan Bayrağı" class="image">
+      <h2>Özbekistan'da Sağlık Devrimi</h2>
+    </div>
+  </div>
+
+  <div id="content"></div>
+
+  <!-- Hakkımızda Bölümü -->
+  <div id="about-section">
+    <h2>Hakkımızda</h2>
+    <p>Bizim misyonumuz, Özbekistan halkına en iyi sağlık hizmetini sunmaktır. Vizyonumuz, bölgedeki en güçlü sağlık sistemlerinden biri olmaktır.</p>
+   
+  </div>
+
+  <!-- Randevu paneli -->
+  <div id="appointment-section">
+    <div id="appointment-panel">
+      <h2>Branş ve Gün Seçimi</h2>
+      <form onsubmit="bookSlot(event)">
+        <label for="branchSelect">Branş Seçiniz</label>
+        <select id="branchSelect" onchange="updateDoctors()">
+          <option value="" disabled selected>Branş Seçiniz...</option>
+          <option value="dahiliye">Dahiliye</option>
+          <option value="ortopedi">Ortopedi</option>
+          <option value="kardiyoloji">Kardiyoloji</option>
+          <option value="kadın hastalıkları ve doğum">Kadın Hastalıkları ve Doğum</option>
+          <option value="aile hekimliği">Aile Hekimliği</option>
+          <option value="çocuk cerrahisi">Çocuk Cerrahisi</option>
+          <option value="göğüs cerrahisi">Göğüs Cerrahisi</option>
+          <option value="genel cerrahi">Genel Cerrahi</option>
+          <option value="göz hastalıkları">Göz Hastalıkları</option>
+          <option value="nöroloji">Nöroloji</option>
+        </select>
+
+        <div id="doctorsContainer"></div>
+        <div id="daysContainer"></div>
+        <div id="slotsContainer"></div>
+        <button type="submit">Randevuyu Oluştur</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="daha güzel.js"></script>
+</body>
+</html>

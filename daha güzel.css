@@ -1,0 +1,105 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/ss4.png') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.8); /* Şeffaflık ayarı */
+}
+
+.header {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Header kısmını biraz opak yapıyoruz */
+    padding: 50px;
+    border-bottom: 2px solid #007bff;
+}
+
+
+.header h1 {
+    font-size: 48px; /* Başlık boyutu büyütüldü */
+    color: #333;
+}
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; /* İçerikler aşağıya alındı */
+}
+
+.image-container {
+    margin: 40px; /* İçeriklerin altı ve üstü genişletildi */
+    text-align: center;
+}
+
+.image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 24px; /* Yazı boyutu büyütüldü */
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #0056b3;
+}
+
+#content {
+    margin-top: 30px;
+}
+
+#appointment-section {
+    display: none; /* İlk başta görünmesin */
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#appointment-panel {
+    background: rgb(97, 161, 207);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form select {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #940d47;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.logo {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 200px; /* Amblem boyutunu ayarlayabilirsin */
+    height: auto;
+}
